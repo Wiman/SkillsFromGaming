@@ -5,12 +5,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="StyleSheet1.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:ListBox ID="ListBox1" runat="server" OnSelectedIndexChanged="ListBox1_SelectedIndexChanged"></asp:ListBox>
+        <div class="div-full">
+
+
+        <div class="div-60">
+            <asp:Panel ID="panel1" runat="server">
+            </asp:Panel>
         </div>
+        <div class="div-40">
+            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+
+        </div>
+                    </div>
     </form>
 </body>
 </html>
