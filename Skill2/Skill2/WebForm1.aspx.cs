@@ -59,7 +59,7 @@ namespace Skill2
                 selectedGames.RemoveAt(i);
             }
 
-            Label1.Text = "";
+            Label1.Text = "Yo - you got skills!<br>";
             foreach(object obj in selectedGames)
             {
                 Label1.Text += (string)obj + "   ";
@@ -67,7 +67,7 @@ namespace Skill2
 
             Session["selectedGames"] = selectedGames;
 
-            CreateButtons();
+            UpdateButtons();
 
         }
 
@@ -92,6 +92,21 @@ namespace Skill2
 
                 panel1.Controls.Add(lButton);
             }
+        }
+
+        void UpdateButtons()
+        {
+            foreach(LinkButton lButton in panel1.Controls.OfType<LinkButton>())
+            {
+                if(selectedGames.IndexOf(lButton.CommandName) > -1)
+                {
+                    lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";
+                } else
+                {
+                    lButton.CssClass = "w3-button w3-black w3-block w3-padding-large w3-jumbo";
+                }
+            }
+
         }
 
 
