@@ -42,6 +42,8 @@ namespace Skill2
                 selectedGames = (ArrayList)Session["selectedGames"];
             }
 
+            Label1.Text = "";
+
             CreateButtons();
 
         }
@@ -59,10 +61,28 @@ namespace Skill2
                 selectedGames.RemoveAt(i);
             }
 
-            Label1.Text = "Yo - you got skills!<br>";
-            foreach(object obj in selectedGames)
+            ArrayList skills = new ArrayList();
+            foreach(string _id in selectedGames)
             {
-                Label1.Text += (string)obj + "   ";
+                Game game = games.GetGame(int.Parse(_id));
+                if (game != null)
+                {
+                    foreach (GameSkill gameSkill in game.gameSkills)
+                    {
+                        if(skills.IndexOf(gameSkill.name) == -1)
+                        {
+                            skills.Add(gameSkill.name);
+                        }
+                    }
+                }
+            }
+
+            if (skills.Count > 0)
+            {
+                Label1.Text = "Yo - you got skills!<br>" + String.Join("<br>", skills.ToArray());
+            } else
+            {
+                Label1.Text = "";
             }
 
             Session["selectedGames"] = selectedGames;

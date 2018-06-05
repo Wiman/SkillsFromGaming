@@ -39,6 +39,18 @@ namespace Skill2
     public class Games
     {
         public IList<Game> games { get; set; }
+
+        public Game GetGame(int _id)
+        {
+            foreach(Game game in games)
+            {
+                if(_id == game._id)
+                {
+                    return game;
+                }
+            }
+            return null;
+        }
     }
 
 }
