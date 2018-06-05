@@ -2,16 +2,11 @@
 
 }
 
-.div-60 {
-    width: 60%;
-}
 
-.div-40 {
-    width: 40%;
-}
 
 .div-full {
-    width: 100%;
+    display:grid;
+    grid-template-columns:repeat(2 , 1fr);
 }
 
 
