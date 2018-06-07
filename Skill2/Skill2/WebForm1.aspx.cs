@@ -15,7 +15,6 @@ namespace Skill2
     {
 
         ArrayList selectedGames = new ArrayList();
-       
         Games games;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -43,6 +42,8 @@ namespace Skill2
                 selectedGames = (ArrayList)Session["selectedGames"];
             }
 
+            Label1.Text = "";
+
             CreateButtons();
 
         }
@@ -50,7 +51,6 @@ namespace Skill2
         void LinkButton_Click(Object sender, EventArgs e)
         {
             LinkButton lButton = (LinkButton)sender;
-      
 
             int i = selectedGames.IndexOf(lButton.CommandName);
             if (i == -1)
@@ -61,12 +61,29 @@ namespace Skill2
                 selectedGames.RemoveAt(i);
             }
 
-            Label1.Text = "Yo - you got skills!<br>";
-            foreach(object obj in selectedGames)
+            ArrayList skills = new ArrayList();
+            foreach(string _id in selectedGames)
             {
-                Label1.Text += (string)obj + "   <br>";
+                Game game = games.GetGame(int.Parse(_id));
+                if (game != null)
+                {
+                    foreach (GameSkill gameSkill in game.gameSkills)
+                    {
+                        if(skills.IndexOf(gameSkill.name) == -1)
+                        {
+                            skills.Add(gameSkill.name);
+                        }
+                    }
+                }
             }
 
+            if (skills.Count > 0)
+            {
+                Label1.Text = "Yo - you got skills!<br>" + String.Join("<br>", skills.ToArray());
+            } else
+            {
+                Label1.Text = "";
+            }
 
             Session["selectedGames"] = selectedGames;
 
@@ -82,9 +99,6 @@ namespace Skill2
                 LinkButton lButton = new LinkButton();
                 lButton.ID = game.shortName;
                 lButton.Text = game.name;
-              
-
-                
                 if (selectedGames.IndexOf(game._id.ToString()) > -1)
                 {
                     lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";
