@@ -65,6 +65,7 @@ namespace Skill2
             }
 
             ArrayList skills = new ArrayList();
+            
             foreach(string _id in selectedGames)
             {
                 Game game = games.GetGame(int.Parse(_id));
@@ -82,6 +83,7 @@ namespace Skill2
 
             if (skills.Count > 0)
             {
+                skills.Sort();
                 Label1.Text = Phrases[r] + "<br>" + String.Join("<br>", skills.ToArray());
             } else
             {
@@ -112,8 +114,9 @@ namespace Skill2
                 }
                 lButton.Command += LinkButton_Click;
                 lButton.CommandName = game._id.ToString();
-                lButton.orderby
+               
                 panel1.Controls.Add(lButton);
+                
             }
         }
 
@@ -121,7 +124,8 @@ namespace Skill2
         {
             foreach(LinkButton lButton in panel1.Controls.OfType<LinkButton>())
             {
-                if(selectedGames.IndexOf(lButton.CommandName) > -1)
+                
+                if (selectedGames.IndexOf(lButton.CommandName) > -1)
                 {
                     lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";
                 } else
