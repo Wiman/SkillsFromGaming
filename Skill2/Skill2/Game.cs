@@ -40,6 +40,15 @@ namespace Skill2
     {
         public IList<Game> games { get; set; }
 
+        public IList<Game> gamesSorted
+        {
+            get
+            {
+                IEnumerable<Game> sortedEnum = games.OrderBy(Game => Game.name);
+                return sortedEnum.ToList<Game>();
+            }
+        }
+
         public Game GetGame(int _id)
         {
             foreach(Game game in games)

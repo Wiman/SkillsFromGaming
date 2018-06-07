@@ -144,6 +144,7 @@
     </Content>
     <Content Include="Main.css" />
     <Content Include="WebForm1.aspx" />
+    <None Include="Properties\PublishProfiles\SkillsFromGamingWeb - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
