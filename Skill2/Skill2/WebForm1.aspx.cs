@@ -15,6 +15,7 @@ namespace Skill2
     {
 
         ArrayList selectedGames = new ArrayList();
+       
         Games games;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -49,6 +50,7 @@ namespace Skill2
         void LinkButton_Click(Object sender, EventArgs e)
         {
             LinkButton lButton = (LinkButton)sender;
+      
 
             int i = selectedGames.IndexOf(lButton.CommandName);
             if (i == -1)
@@ -62,8 +64,9 @@ namespace Skill2
             Label1.Text = "Yo - you got skills!<br>";
             foreach(object obj in selectedGames)
             {
-                Label1.Text += (string)obj + "   ";
+                Label1.Text += (string)obj + "   <br>";
             }
+
 
             Session["selectedGames"] = selectedGames;
 
@@ -79,6 +82,9 @@ namespace Skill2
                 LinkButton lButton = new LinkButton();
                 lButton.ID = game.shortName;
                 lButton.Text = game.name;
+              
+
+                
                 if (selectedGames.IndexOf(game._id.ToString()) > -1)
                 {
                     lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";

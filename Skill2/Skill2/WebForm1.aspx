@@ -17,6 +17,7 @@
             </div>
             <div class="div-40">
                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                <listbox id="ListBoxSkills"></listbox>
 
             </div>
         </div>
