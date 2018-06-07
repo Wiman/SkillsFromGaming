@@ -5,8 +5,25 @@
 
 
 .div-full {
-    display:grid;
-    grid-template-columns:repeat(2 , 1fr);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid black;
 }
+
+.div-40 {
+    display:flex;
+    justify-content: center;
+    align-items center;
+    border: 2px solid black;
+    font-size: 20px;
+ 
+
+
+
+}
+#Label1 {
+    font-size: 20px;
+    text-align: center;
+} 
 
 
