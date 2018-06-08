@@ -98,7 +98,7 @@ namespace Skill2
 
         void CreateButtons()
         {
-            foreach (Game game in games.games)
+            foreach (Game game in games.gamesSorted)
             {
                 //ListBox1.Items.Add(new ListItem(game.name, game._id.ToString()));
                 LinkButton lButton = new LinkButton();

@@ -5,17 +5,21 @@
 
 
 .div-full {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 2px solid black;
+    display: flex;
+    align-items stretch:
+    
+
 }
 
+
+.div-60 {
+    width:60%;
+   flex-grow: 2;
+}
 .div-40 {
-    display:flex;
-    justify-content: center;
-    align-items center;
-    border: 2px solid black;
-    font-size: 20px;
+    width:40%;
+  flex-grow: 1;
+
  
 
 
