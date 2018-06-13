@@ -17,6 +17,7 @@
             </div>
             <div class="div-right">
                 <div style="position:fixed; top: 0px; text-align: center; align-self: center;">
+                    <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
                 </div>
             </div>

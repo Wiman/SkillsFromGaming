@@ -31,6 +31,17 @@
     margin: auto;
     width: 100%;
     align-self: center;
+}
+
+#Label2 {
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    align-self: center;
+    text-shadow: 0 0 4px #ff3333;
+    font-weight: bold;
 } 
+
 
 

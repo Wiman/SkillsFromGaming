@@ -85,7 +85,8 @@ namespace Skill2
             if (skills.Count > 0)
             {
                 skills.Sort();
-                Label1.Text = "<l1>" + Phrases[r] + "</l1><br>" + String.Join("<br>", skills.ToArray());
+                Label2.Text = "<l1>" + Phrases[r] + "</l1><br>";
+                Label1.Text = String.Join("<br>", skills.ToArray());
             } else
             {
                 Label1.Text = "";
