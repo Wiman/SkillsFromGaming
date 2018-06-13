@@ -11,12 +11,11 @@
 
 }
 
-
-.div-60 {
+.div-left {
     width: 70%;
 }
 
-.div-40 {
+.div-right {
     width: 30%;
     text-align: center;
     margin: auto;

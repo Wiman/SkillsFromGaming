@@ -11,14 +11,14 @@
 <body>
     <form id="form1" runat="server">
         <div class="div-full">
-            <div class="div-60">
+            <div class="div-left">
                 <asp:Panel ID="panel1" runat="server">
                 </asp:Panel>
             </div>
-            <div class="div-40">
-                <div style="position:fixed; top: 0px; text-align: center;">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                    </div>
+            <div class="div-right">
+                <div style="position:fixed; top: 0px; text-align: center; align-self: center;">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </div>
             </div>
         </div>
     </form>
