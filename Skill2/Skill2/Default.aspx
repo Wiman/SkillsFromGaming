@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Skill2.Default" MaintainScrollPositionOnPostback="true"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Skill2.WebForm1" MaintainScrollPositionOnPostback="true"%>
 
 <!DOCTYPE html>
 
@@ -11,14 +11,14 @@
 <body>
     <form id="form1" runat="server">
         <div class="div-full">
-            <div class="div-60">
+            <div class="div-left">
                 <asp:Panel ID="panel1" runat="server">
                 </asp:Panel>
             </div>
-            <div class="div-40">
-                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-                
-                
+            <div class="div-right">
+                <div style="position:fixed; top: 0px; text-align: center; align-self: center;">
+                    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                </div>
             </div>
         </div>
     </form>

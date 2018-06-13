@@ -6,28 +6,31 @@
 
 .div-full {
     display: flex;
-    align-items stretch:
+    align-items: center;
     
 
 }
 
-
-.div-60 {
-    width:60%;
-   flex-grow: 2;
+.div-left {
+    width: 70%;
 }
-.div-40 {
-    width:40%;
-  flex-grow: 1;
 
- 
+.div-right {
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    align-self: center;
+}
 
-
-
+.div-button {
+    overflow: auto;
 }
 #Label1 {
     font-size: 20px;
     text-align: center;
+    margin: auto;
+    width: 100%;
+    align-self: center;
 } 
 
 

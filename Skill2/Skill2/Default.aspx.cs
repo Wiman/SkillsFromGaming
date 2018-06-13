@@ -85,7 +85,7 @@ namespace Skill2
             if (skills.Count > 0)
             {
                 skills.Sort();
-                Label1.Text = Phrases[r] + "<br>" + String.Join("<br>", skills.ToArray());
+                Label1.Text = "<l1>" + Phrases[r] + "</l1><br>" + String.Join("<br>", skills.ToArray());
             } else
             {
                 Label1.Text = "";
@@ -107,11 +107,11 @@ namespace Skill2
                 lButton.Text = game.name;
                 if (selectedGames.IndexOf(game._id.ToString()) > -1)
                 {
-                    lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";
+                    lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo div-button";
                 }
                 else
                 {
-                    lButton.CssClass = "w3-button w3-black w3-block w3-padding-large w3-jumbo";
+                    lButton.CssClass = "w3-button w3-black w3-block w3-padding-large w3-jumbo div-button";
                 }
                 lButton.Command += LinkButton_Click;
                 lButton.CommandName = game._id.ToString();
@@ -128,10 +128,10 @@ namespace Skill2
                 
                 if (selectedGames.IndexOf(lButton.CommandName) > -1)
                 {
-                    lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo";
+                    lButton.CssClass = "w3-button w3-red w3-block w3-padding-large w3-jumbo div-button";
                 } else
                 {
-                    lButton.CssClass = "w3-button w3-black w3-block w3-padding-large w3-jumbo";
+                    lButton.CssClass = "w3-button w3-black w3-block w3-padding-large w3-jumbo div-button";
                 }
             }
 
