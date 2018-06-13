@@ -11,7 +11,7 @@ using System.Collections;
 
 namespace Skill2
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class Default : System.Web.UI.Page
     {
 
         ArrayList selectedGames = new ArrayList();
@@ -47,6 +47,7 @@ namespace Skill2
             CreateButtons();
 
         }
+
 
         void LinkButton_Click(Object sender, EventArgs e)
         {
@@ -136,7 +137,6 @@ namespace Skill2
 
         }
 
-
-
+       
     }
 }

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="Skill2.WebForm1" MaintainScrollPositionOnPostback="true"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Skill2.Default" MaintainScrollPositionOnPostback="true"%>
 
 <!DOCTYPE html>
 
@@ -17,6 +17,8 @@
             </div>
             <div class="div-40">
                 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                
+                
             </div>
         </div>
     </form>
